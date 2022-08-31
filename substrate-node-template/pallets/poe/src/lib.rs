@@ -4,6 +4,11 @@
 /// Learn more about FRAME and the core library of Substrate FRAME pallets:
 /// <https://docs.substrate.io/v3/runtime/frame>
 pub use pallet::*;
+#[cfg(test)]
+mod mock;
+
+#[cfg(test)]
+mod tests;
 #[frame_support::pallet]
 pub mod pallet {
     use frame_support::pallet_prelude::*;
@@ -130,7 +135,7 @@ pub mod pallet {
 
             // Verify that the specified proof has been claimed.
             // Get owner of the claim.
-            let (owner, block_number) = Proofs::<T>::get(&bounded_claim).ok_or(Error::<T>::NoSuchClaim)?;
+            let (owner, _) = Proofs::<T>::get(&bounded_claim).ok_or(Error::<T>::NoSuchClaim)?;
 
             // Verify that sender of the current call is the claim owner.
             ensure!(sender == owner, Error::<T>::NotClaimOwner);
