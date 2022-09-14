@@ -21,7 +21,6 @@ frame_support::construct_runtime!(
 		PoeModule: pallet_poe::{Pallet, Call, Storage, Event<T>},
 	}
 );
-
 impl system::Config for Test {
 	type BaseCallFilter = frame_support::traits::Everything;
 	type BlockWeights = ();

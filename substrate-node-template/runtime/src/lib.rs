@@ -143,6 +143,8 @@ parameter_types! {
 	pub BlockLength: frame_system::limits::BlockLength = frame_system::limits::BlockLength
 		::max_with_normal_ratio(5 * 1024 * 1024, NORMAL_DISPATCH_RATIO);
 	pub const SS58Prefix: u8 = 42;
+	// One can own at most 9999 Kitties.
+	pub const MaxKittyOwned: u32 = 9999;
 }
 
 // Configure FRAME pallets to include in runtime.
@@ -236,17 +238,17 @@ impl pallet_timestamp::Config for Runtime {
 }
 
 impl pallet_balances::Config for Runtime {
-	type MaxLocks = ConstU32<50>;
-	type MaxReserves = ();
-	type ReserveIdentifier = [u8; 8];
 	/// The type for recording an account's balance.
 	type Balance = Balance;
+	type DustRemoval = ();
 	/// The ubiquitous event type.
 	type Event = Event;
-	type DustRemoval = ();
 	type ExistentialDeposit = ConstU128<500>;
 	type AccountStore = System;
 	type WeightInfo = pallet_balances::weights::SubstrateWeight<Runtime>;
+	type MaxLocks = ConstU32<50>;
+	type MaxReserves = ();
+	type ReserveIdentifier = [u8; 8];
 }
 
 impl pallet_transaction_payment::Config for Runtime {
@@ -272,9 +274,17 @@ impl pallet_poe::Config for Runtime {
 	type MaxClaimLength =ConstU32<512>;
 }
 
-
+parameter_types!{
+		pub const ReserveForCreateKitty: u128 = 1_000;
+}
 impl pallet_kitties::Config for Runtime {
 	type Event = Event;
+	type Randomness = RandomnessCollectiveFlip;
+	//type MaxKittyOwned = MaxKittyOwned;
+	type KittyIndex =  u32;
+	type Currency = Balances;
+	type MaxKittyIndex = ConstU32<512>;
+	type ReserveForCreateKitty =ReserveForCreateKitty;
 }
 
 // Create the runtime by composing the FRAME pallets that were previously configured.
@@ -295,6 +305,7 @@ construct_runtime!(
 		// Include the custom logic from the pallet-template in the runtime.
 		TemplateModule: pallet_template,
 		PoeModule: pallet_poe,
+		KittiesModule:pallet_kitties,
 	}
 );
 
