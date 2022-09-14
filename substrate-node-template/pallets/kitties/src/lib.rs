@@ -30,7 +30,8 @@ pub mod pallet {
 		//type KittyIndex: Parameter+AtLeast32BitUnsigned + Copy + Parameter + Default + Bounded + MaxEncodedLen+CheckedAdd;
 		type KittyIndex: Parameter + AtLeast32BitUnsigned + Default + Copy + Bounded + CheckedAdd + MaxEncodedLen;
 		/// The Currency handler for the Kitties pallet.
-		type Currency: Currency<Self::AccountId> + ReservableCurrency<Self::AccountId>;
+		//type Currency: Currency<Self::AccountId> + ReservableCurrency<Self::AccountId>;
+		type Currency: ReservableCurrency<Self::AccountId>;
 		#[pallet::constant]
 		type MaxKittyIndex: Get<u32>;
 		/// The staking balance when create_kitty
@@ -137,6 +138,9 @@ pub mod pallet {
 			ensure!(kitty_id_1 != kitty_id_2, Error::<T>::SameKittyId);
 			let kitty_1 = Self::get_kitty(kitty_id_1).map_err(|_| Error::<T>::InvalidKittyId)?;
 			let kitty_2 = Self::get_kitty(kitty_id_2).map_err(|_| Error::<T>::InvalidKittyId)?;
+			//check owner
+			ensure!(Self::kitty_owner(kitty_id_1) == Some(who.clone()), Error::<T>::NotOwner);
+			ensure!(Self::kitty_owner(kitty_id_2) == Some(who.clone()), Error::<T>::NotOwner);
 			let selector = Self::random_value(&who);
 			//let selector = Self::random_value();
 			let mut data = [0u8; 16];
@@ -214,6 +218,7 @@ pub mod pallet {
 			let kitty = Kitty(dna);
 			Kitties::<T>::insert(kitty_id, &kitty);
 			KittyOwner::<T>::insert(kitty_id, &owner);
+			//KittyIdOverflow
 			let next_kitty_id = kitty_id
 				.checked_add(&(T::KittyIndex::from(1_u8)))
 				.ok_or(Error::<T>::KittyIdOverflow)

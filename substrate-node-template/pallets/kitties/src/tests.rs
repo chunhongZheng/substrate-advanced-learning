@@ -32,9 +32,10 @@ fn create_kitty_works() {
 #[test]
 fn create_kitty_not_enough_balance_should_fail(){
 	new_test_ext().execute_with(|| {
-		// create a kitty with account #3.
+		// create a kitty with account #5.
+		//初始化只有0, 100), (1, 98), (2, 50)，账户5余额为0
 		assert_noop!(
-			KittiesModule::create(Origin::signed(3)),
+			KittiesModule::create(Origin::signed(5)),
 			Error::<Test>::NotEnoughBalance
 		);
 	});
@@ -55,4 +56,57 @@ fn create_kitty_exceed_max_kitty_owned_should_fail() {
 		);
 	});
 }
+//
+#[test]
+fn create_kitty_count_overflow_should_fail() {
+	new_test_ext().execute_with(|| {
+		//let kitty_id: u32 = NextKittyId::<Test>::get();
+		NextKittyId::<Test>::put(u32::max_value());
+		// create a kitty with account #1.
+		//assert_err!(KittiesModule::create(Origin::signed(1)), Error::<Test>::KittyIdOverflow);
+		assert_noop!(
+			KittiesModule::create(Origin::signed(1)),
+			Error::<Test>::InvalidKittyId
+		);
+	});
+}
 
+#[test]
+fn create_kitty_next_kitty_id_overflow_should_fail() {
+	new_test_ext().execute_with(|| {
+		NextKittyId::<Test>::put(u32::max_value());
+		assert_noop!(
+			KittiesModule::create(Origin::signed(1)),
+			Error::<Test>::InvalidKittyId
+		);
+	});
+}
+
+#[test]
+fn breed_kitty_works(){
+	new_test_ext().execute_with(|| {
+		let account_id: u64 = 1;
+		KittiesModule::create(Origin::signed(account_id));
+		KittiesModule::create(Origin::signed(account_id));
+		let kitty_id1= KittiesModule::all_kitties(1)[0];
+		let kitty_id2= KittiesModule::all_kitties(1)[1];
+		assert_ok!(KittiesModule::breed(Origin::signed(account_id), kitty_id1, kitty_id2));
+	});
+}
+
+#[test]
+fn breed_kitty_not_owner_should_fail(){
+	new_test_ext().execute_with(|| {
+		let account_id: u64 = 1;
+		KittiesModule::create(Origin::signed(account_id));
+		KittiesModule::create(Origin::signed(account_id));
+		let kitty_id1= KittiesModule::all_kitties(1)[0];
+		let kitty_id2= KittiesModule::all_kitties(1)[1];
+		let account_id2: u64 = 2;
+		assert_noop!(
+			KittiesModule::breed(Origin::signed(account_id2), kitty_id1, kitty_id2),
+			Error::<Test>::NotOwner
+		);
+
+	});
+}
