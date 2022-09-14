@@ -24,7 +24,7 @@ pub mod pallet {
 		type KittyIndex: Parameter + AtLeast32BitUnsigned + Default + Copy + Bounded + CheckedAdd + MaxEncodedLen;
 		/// The Currency handler for the Kitties pallet.
 		//type Currency: Currency<Self::AccountId> + ReservableCurrency<Self::AccountId>;
-		type Currency: ReservableCurrency<Self::AccountId>;
+		type Currency: Currency<Self::AccountId> + ReservableCurrency<Self::AccountId>;
 		#[pallet::constant]
 		type MaxKittyIndex: Get<u32>;
 		/// The staking balance when create_kitty
