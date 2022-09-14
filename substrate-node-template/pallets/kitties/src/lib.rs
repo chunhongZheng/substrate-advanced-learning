@@ -15,13 +15,6 @@ pub mod pallet {
     use frame_support::{log, sp_runtime::traits::{AtLeast32BitUnsigned, Bounded, CheckedAdd}, traits::{Currency, Randomness, ReservableCurrency}};
     use frame_system::pallet_prelude::*;
     use scale_info::TypeInfo;
-	// #[cfg(feature = "std")]
-    // use frame_support::serde::{Deserialize, Serialize};
-	//use sp_core::blake2_128;
-
-	//type KittyIndex = u32;
-
-
 	#[pallet::config]
 	pub trait Config: frame_system::Config {
 		type Event: From<Event<Self>> + IsType<<Self as frame_system::Config>::Event>;
@@ -56,7 +49,6 @@ pub mod pallet {
 	#[pallet::storage]
 	#[pallet::getter(fn next_kitty_id)]
 	pub type NextKittyId<T: Config> = StorageValue<_, T::KittyIndex,ValueQuery, GetDefaultValue<T>>;
-	//pub type NextKittyId<T: Config> = StorageValue<_, T::KittyIndex, ValueQuery, GetDefaultValue>;
 	#[pallet::storage]
 	#[pallet::getter(fn kitties)]
 	pub type Kitties<T:Config> = StorageMap<_, Blake2_128Concat, T::KittyIndex, Kitty>;
@@ -75,24 +67,6 @@ pub mod pallet {
 		BoundedVec<T::KittyIndex, T::MaxKittyIndex>,
 		ValueQuery,
 	>;
-
-	// // Our pallet's genesis configuration.
-	// #[pallet::genesis_config]
-	// pub struct GenesisConfig<T: Config> {
-	// 	pub kitties: Vec<(T::AccountId, [u8; 16], Gender)>,
-	// }
-	//
-	// // Required to implement default for GenesisConfig.
-	// #[cfg(feature = "std")]
-	// impl<T: Config> Default for GenesisConfig<T> {
-	// 	fn default() -> GenesisConfig<T> {
-	// 		GenesisConfig { kitties: vec![] }
-	// 	}
-	// }
-
-
-
-
 	#[pallet::event]
 	#[pallet::generate_deposit(pub(super) fn deposit_event)]
 	pub enum Event<T: Config> {
@@ -122,7 +96,6 @@ pub mod pallet {
 			ensure!(T::Currency::can_reserve(&who, kitty_price), Error::<T>::NotEnoughBalance);
 			T::Currency::reserve(&who, kitty_price)?;
 			 let dna = Self::random_value(&who);
-			//let dna = Self::random_value();
 			 let kitty_id=Self::mint(&who,dna)?;
 			// // Logging to the console
 			 log::info!("A kitty is born with ID: {:?}.", kitty_id);
@@ -182,19 +155,10 @@ pub mod pallet {
 
 	impl<T: Config> Pallet<T> {
 
-		// fn random_value() -> [u8; 16] {
-		// 	let payload = (
-		// 		T::Randomness::random(&b"dna"[..]).0,
-		// 		<frame_system::Pallet<T>>::extrinsic_index(),
-		// 	);
-		// 	payload.using_encoded(sp_io::hashing::blake2_128)
-		// }
-
 		// get a random 256.
 		fn random_value(sender: &T::AccountId) -> [u8; 16] {
 			let payload = (
 				T::Randomness::random_seed(),
-				//Self::random(&[][..]),
 				&sender,
 				<frame_system::Pallet<T>>::extrinsic_index(),
 			);
