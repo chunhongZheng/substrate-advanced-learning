@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="CargoProjects">
+    <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6b1d8606-3d07-43de-88ab-3032fe0f69c9" name="变更" comment="">
+      <change afterPath="$PROJECT_DIR$/../substrate-front-end-template/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../substrate-front-end-template/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../substrate-front-end-template/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../substrate-front-end-template/.idea/substrate-front-end-template.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../substrate-front-end-template/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../substrate-front-end-template/src/Kitties.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../substrate-front-end-template/src/KittyAvatar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../substrate-front-end-template/src/KittyCards.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/substrate-node-template.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../substrate-front-end-template/src/AccountSelector.js" beforeDir="false" afterPath="$PROJECT_DIR$/../substrate-front-end-template/src/AccountSelector.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../substrate-front-end-template/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../substrate-front-end-template/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../substrate-front-end-template/src/TemplateModule.js" beforeDir="false" afterPath="$PROJECT_DIR$/../substrate-front-end-template/src/TemplateModule.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pallets/kitties/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/pallets/kitties/src/lib.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pallets/kitties/src/mock.rs" beforeDir="false" afterPath="$PROJECT_DIR$/pallets/kitties/src/mock.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pallets/kitties/src/tests.rs" beforeDir="false" afterPath="$PROJECT_DIR$/pallets/kitties/src/tests.rs" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="tz8vhux3" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2EnXMHHZS8rHzxWNCZUBJKlJgfB" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/caspar/CLionProjects/substrate-advanced-learning/substrate-node-template&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;org.rust.cargo.project.model.PROJECT_DISCOVERY&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager" selected="Cargo.Test tests::breed_kitty_not_owner_should_fail">
+    <configuration name="Test tests::breed_kitty_not_owner_should_fail" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="command" value="test --package pallet-kitties --lib tests::breed_kitty_not_owner_should_fail -- --exact" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <option name="channel" value="DEFAULT" />
+      <option name="requiredFeatures" value="true" />
+      <option name="allFeatures" value="false" />
+      <option name="emulateTerminal" value="false" />
+      <option name="withSudo" value="false" />
+      <option name="buildTarget" value="REMOTE" />
+      <option name="backtrace" value="SHORT" />
+      <envs />
+      <option name="isRedirectInput" value="false" />
+      <option name="redirectInputPath" value="" />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test tests::breed_kitty_works" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="command" value="test --package pallet-kitties --lib tests::breed_kitty_works -- --exact" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <option name="channel" value="DEFAULT" />
+      <option name="requiredFeatures" value="true" />
+      <option name="allFeatures" value="false" />
+      <option name="emulateTerminal" value="false" />
+      <option name="withSudo" value="false" />
+      <option name="buildTarget" value="REMOTE" />
+      <option name="backtrace" value="SHORT" />
+      <envs />
+      <option name="isRedirectInput" value="false" />
+      <option name="redirectInputPath" value="" />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test tests::create_kitty_count_overflow_should_fail" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="command" value="test --package pallet-kitties --lib tests::create_kitty_count_overflow_should_fail -- --exact" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <option name="channel" value="DEFAULT" />
+      <option name="requiredFeatures" value="true" />
+      <option name="allFeatures" value="false" />
+      <option name="emulateTerminal" value="false" />
+      <option name="withSudo" value="false" />
+      <option name="buildTarget" value="REMOTE" />
+      <option name="backtrace" value="SHORT" />
+      <envs />
+      <option name="isRedirectInput" value="false" />
+      <option name="redirectInputPath" value="" />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test tests::create_kitty_next_kitty_id_overflow_should_fail" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="command" value="test --package pallet-kitties --lib tests::create_kitty_next_kitty_id_overflow_should_fail -- --exact" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <option name="channel" value="DEFAULT" />
+      <option name="requiredFeatures" value="true" />
+      <option name="allFeatures" value="false" />
+      <option name="emulateTerminal" value="false" />
+      <option name="withSudo" value="false" />
+      <option name="buildTarget" value="REMOTE" />
+      <option name="backtrace" value="SHORT" />
+      <envs />
+      <option name="isRedirectInput" value="false" />
+      <option name="redirectInputPath" value="" />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test tests::create_kitty_not_enough_balance_should_fail" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="command" value="test --package pallet-kitties --lib tests::create_kitty_not_enough_balance_should_fail -- --exact" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <option name="channel" value="DEFAULT" />
+      <option name="requiredFeatures" value="true" />
+      <option name="allFeatures" value="false" />
+      <option name="emulateTerminal" value="false" />
+      <option name="withSudo" value="false" />
+      <option name="buildTarget" value="REMOTE" />
+      <option name="backtrace" value="SHORT" />
+      <envs />
+      <option name="isRedirectInput" value="false" />
+      <option name="redirectInputPath" value="" />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Cargo.Test tests::breed_kitty_not_owner_should_fail" />
+        <item itemvalue="Cargo.Test tests::create_kitty_next_kitty_id_overflow_should_fail" />
+        <item itemvalue="Cargo.Test tests::create_kitty_not_enough_balance_should_fail" />
+        <item itemvalue="Cargo.Test tests::create_kitty_count_overflow_should_fail" />
+        <item itemvalue="Cargo.Test tests::breed_kitty_works" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="RustProjectSettings">
+    <option name="toolchainHomeDirectory" value="$USER_HOME$/.cargo/bin" />
+    <option name="version" value="2" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="6b1d8606-3d07-43de-88ab-3032fe0f69c9" name="变更" comment="" />
+      <created>1663232276917</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1663232276917</updated>
+      <workItem from="1663232282481" duration="25000" />
+      <workItem from="1663233255868" duration="1000000" />
+      <workItem from="1663290435925" duration="1225000" />
+      <workItem from="1663296236537" duration="963000" />
+      <workItem from="1663298646873" duration="340000" />
+      <workItem from="1663299102729" duration="2313000" />
+      <workItem from="1663311556889" duration="4256000" />
+      <workItem from="1663336218833" duration="665000" />
+      <workItem from="1663414305652" duration="3655000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

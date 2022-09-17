@@ -12,7 +12,7 @@ mod tests;
 pub mod pallet {
 	//use std::fmt::Debug;
 	use frame_support::pallet_prelude::*;
-    use frame_support::{log, sp_runtime::traits::{AtLeast32BitUnsigned, Bounded, CheckedAdd}, traits::{Currency, Randomness, ReservableCurrency}};
+    use frame_support::{log,transactional, sp_runtime::traits::{AtLeast32BitUnsigned, Bounded, CheckedAdd}, traits::{Currency, Randomness, ReservableCurrency}};
     use frame_system::pallet_prelude::*;
     use scale_info::TypeInfo;
 	#[pallet::config]
@@ -90,6 +90,7 @@ pub mod pallet {
 	#[pallet::call]
 	impl<T: Config> Pallet<T> {
 		#[pallet::weight(10_000)]
+		#[transactional]
 		pub fn create(origin: OriginFor<T>) -> DispatchResult {
 			let who = ensure_signed(origin)?;
 			let kitty_price = T::ReserveForCreateKitty::get();
@@ -104,6 +105,7 @@ pub mod pallet {
 		}
 
 		#[pallet::weight(10_000)]
+		#[transactional]
 		pub fn breed(origin: OriginFor<T>, kitty_id_1: T::KittyIndex, kitty_id_2: T::KittyIndex) -> DispatchResult {
 			let who = ensure_signed(origin)?;
 			let kitty_price = T::ReserveForCreateKitty::get();
@@ -128,6 +130,7 @@ pub mod pallet {
 		}
 
 		#[pallet::weight(10_000)]
+		#[transactional]
 		pub fn transfer(origin: OriginFor<T>, kitty_id: T::KittyIndex, new_owner: T::AccountId) -> DispatchResult {
 			let who = ensure_signed(origin)?;
 			let kitty_price = T::ReserveForCreateKitty::get();

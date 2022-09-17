@@ -1,7 +1,7 @@
 use crate as pallet_kitties;
 use frame_support::{
 	parameter_types,
-	traits::{ConstU16, ConstU32, ConstU64},
+	traits::{ConstU16, ConstU64},
 };
 use frame_system as system;
 use sp_core::H256;

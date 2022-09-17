@@ -2,6 +2,7 @@ use crate::{mock::*, Error};
 use frame_support::{assert_noop, assert_ok};
 use frame_support::dispatch::RawOrigin;
 use frame_system::ensure_signed;
+use frame_support::transactional;
 use super::*;
 #[test]
 fn create_kitty_works() {
@@ -58,6 +59,7 @@ fn create_kitty_exceed_max_kitty_owned_should_fail() {
 }
 //
 #[test]
+//#[transactional]
 fn create_kitty_count_overflow_should_fail() {
 	new_test_ext().execute_with(|| {
 		//let kitty_id: u32 = NextKittyId::<Test>::get();
@@ -79,6 +81,11 @@ fn create_kitty_next_kitty_id_overflow_should_fail() {
 			KittiesModule::create(Origin::signed(1)),
 			Error::<Test>::InvalidKittyId
 		);
+		// assert_noop!(
+		// 	KittiesModule::create(Origin::signed(1)),
+		// 	Error::<Test>::ExceedMaxKittyOwned
+		// );
+
 	});
 }
 
