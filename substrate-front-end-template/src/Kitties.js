@@ -14,6 +14,7 @@ export default function Kitties(props) {
   const [status, setStatus] = useState('');
 
   useEffect(() => {
+    // 获取所有kittyIndexes，并传至kittyIndexes数组
     const fetchKittyIndexes = async () => {
       const kittyIndex = (
         await api.query.kittiesModule.nextKittyId()
@@ -29,7 +30,7 @@ export default function Kitties(props) {
 
   useEffect(() => {
     let unsub = null;
-
+    //获取所有不同用户的kitties
     const fetchKitties = async () => {
       const owners = await api.query.kittiesModule.kittyOwner.multi(
         kittyIndexes
