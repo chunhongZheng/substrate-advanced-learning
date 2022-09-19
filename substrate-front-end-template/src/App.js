@@ -20,6 +20,7 @@ import Interactor from './Interactor'
 import Metadata from './Metadata'
 import NodeInfo from './NodeInfo'
 import TemplateModule from './TemplateModule'
+import Kitties from './Kitties'
 import Transfer from './Transfer'
 import Upgrade from './Upgrade'
 
@@ -83,6 +84,10 @@ function Main() {
           </Grid.Row>
           <Grid.Row>
             <TemplateModule />
+          </Grid.Row>
+          {/*//添加kittyModule配置*/}
+          <Grid.Row>
+            <Kitties/>
           </Grid.Row>
         </Grid>
       </Container>

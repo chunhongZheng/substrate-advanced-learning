@@ -9,8 +9,7 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b1d8606-3d07-43de-88ab-3032fe0f69c9" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/../substrate-front-end-template/.idea/.gitignore" afterDir="false" />
+    <list default="true" id="6b1d8606-3d07-43de-88ab-3032fe0f69c9" name="变更" comment="kitty 添加 #[transactional] 宏   20220917">
       <change afterPath="$PROJECT_DIR$/../substrate-front-end-template/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../substrate-front-end-template/.idea/modules.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../substrate-front-end-template/.idea/substrate-front-end-template.iml" afterDir="false" />
@@ -19,15 +18,10 @@
       <change afterPath="$PROJECT_DIR$/../substrate-front-end-template/src/KittyAvatar.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../substrate-front-end-template/src/KittyCards.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/substrate-node-template.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../substrate-front-end-template/src/AccountSelector.js" beforeDir="false" afterPath="$PROJECT_DIR$/../substrate-front-end-template/src/AccountSelector.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../substrate-front-end-template/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../substrate-front-end-template/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../substrate-front-end-template/src/TemplateModule.js" beforeDir="false" afterPath="$PROJECT_DIR$/../substrate-front-end-template/src/TemplateModule.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pallets/kitties/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/pallets/kitties/src/lib.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pallets/kitties/src/mock.rs" beforeDir="false" afterPath="$PROJECT_DIR$/pallets/kitties/src/mock.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pallets/kitties/src/tests.rs" beforeDir="false" afterPath="$PROJECT_DIR$/pallets/kitties/src/tests.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,8 +175,17 @@
       <workItem from="1663299102729" duration="2313000" />
       <workItem from="1663311556889" duration="4256000" />
       <workItem from="1663336218833" duration="665000" />
-      <workItem from="1663414305652" duration="3655000" />
+      <workItem from="1663414305652" duration="7072000" />
+      <workItem from="1663546548238" duration="213000" />
     </task>
+    <task id="LOCAL-00001" summary="kitty 添加 #[transactional] 宏   20220917">
+      <created>1663425963398</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1663425963398</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,5 +201,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="kitty 添加 #[transactional] 宏   20220917" />
+    <option name="LAST_COMMIT_MESSAGE" value="kitty 添加 #[transactional] 宏   20220917" />
   </component>
 </project>

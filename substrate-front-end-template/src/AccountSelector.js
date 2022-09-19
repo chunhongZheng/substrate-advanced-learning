@@ -49,7 +49,9 @@ function Main(props) {
     setCurrentAccount(keyring.getPair(addr))
   }
 
+
   return (
+
     <Menu
       attached="top"
       tabular
@@ -103,6 +105,7 @@ function Main(props) {
           />
           <BalanceAnnotation />
         </Menu.Menu>
+        {acctAddr(currentAccount)}
       </Container>
     </Menu>
   )

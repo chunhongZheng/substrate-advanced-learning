@@ -13,7 +13,8 @@ function Main(props) {
   // The currently stored value
   const [currentValue, setCurrentValue] = useState(0)
   const [formValue, setFormValue] = useState(0)
-
+    // 从 `AccountSelector` 组件中获取选定的用户。
+   console.log({api});
   useEffect(() => {
     let unsubscribe
     api.query.templateModule
