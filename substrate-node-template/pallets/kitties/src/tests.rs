@@ -117,3 +117,31 @@ fn breed_kitty_not_owner_should_fail(){
 
 	});
 }
+
+#[test]
+fn transfer_kitty_work(){
+	new_test_ext().execute_with(|| {
+		let account_id: u64 = 1;
+		KittiesModule::create(Origin::signed(account_id)); //账号1创建kitty
+        //转移
+		let kittyIndex1= KittiesModule::all_kitties(1)[0];
+		KittiesModule::transfer(Origin::signed(account_id),kittyIndex1,2);  //转移到账号2
+		//查看kitty0归属是否为账户2
+		let acc=KittiesModule::kitty_owner(kittyIndex1).unwrap();
+		assert_eq!(acc, 2);
+	});
+}
+#[test]
+fn transfer_kitty_not_owner(){
+	new_test_ext().execute_with(|| {
+		let account_id: u64 = 1;
+		KittiesModule::create(Origin::signed(account_id)); //账号1创建kitty
+		//转移
+		let kittyIndex1= KittiesModule::all_kitties(1)[0];
+		assert_noop!(
+			KittiesModule::transfer(Origin::signed(2),kittyIndex1,3),
+			Error::<Test>::NotOwner
+		);
+
+	});
+}

@@ -10,18 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b1d8606-3d07-43de-88ab-3032fe0f69c9" name="变更" comment="kitty 添加 #[transactional] 宏   20220917">
-      <change afterPath="$PROJECT_DIR$/../substrate-front-end-template/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../substrate-front-end-template/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../substrate-front-end-template/.idea/substrate-front-end-template.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../substrate-front-end-template/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../substrate-front-end-template/src/Kitties.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../substrate-front-end-template/src/KittyAvatar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../substrate-front-end-template/src/KittyCards.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../substrate-front-end-template/src/AccountSelector.js" beforeDir="false" afterPath="$PROJECT_DIR$/../substrate-front-end-template/src/AccountSelector.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../substrate-front-end-template/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../substrate-front-end-template/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../substrate-front-end-template/src/TemplateModule.js" beforeDir="false" afterPath="$PROJECT_DIR$/../substrate-front-end-template/src/TemplateModule.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pallets/kitties/src/tests.rs" beforeDir="false" afterPath="$PROJECT_DIR$/pallets/kitties/src/tests.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,43 +49,9 @@
     &quot;org.rust.cargo.project.model.PROJECT_DISCOVERY&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Cargo.Test tests::breed_kitty_not_owner_should_fail">
+  <component name="RunManager" selected="Cargo.Test tests::transfer_kitty_not_owner">
     <configuration name="Test tests::breed_kitty_not_owner_should_fail" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
       <option name="command" value="test --package pallet-kitties --lib tests::breed_kitty_not_owner_should_fail -- --exact" />
-      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
-      <option name="channel" value="DEFAULT" />
-      <option name="requiredFeatures" value="true" />
-      <option name="allFeatures" value="false" />
-      <option name="emulateTerminal" value="false" />
-      <option name="withSudo" value="false" />
-      <option name="buildTarget" value="REMOTE" />
-      <option name="backtrace" value="SHORT" />
-      <envs />
-      <option name="isRedirectInput" value="false" />
-      <option name="redirectInputPath" value="" />
-      <method v="2">
-        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Test tests::breed_kitty_works" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
-      <option name="command" value="test --package pallet-kitties --lib tests::breed_kitty_works -- --exact" />
-      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
-      <option name="channel" value="DEFAULT" />
-      <option name="requiredFeatures" value="true" />
-      <option name="allFeatures" value="false" />
-      <option name="emulateTerminal" value="false" />
-      <option name="withSudo" value="false" />
-      <option name="buildTarget" value="REMOTE" />
-      <option name="backtrace" value="SHORT" />
-      <envs />
-      <option name="isRedirectInput" value="false" />
-      <option name="redirectInputPath" value="" />
-      <method v="2">
-        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Test tests::create_kitty_count_overflow_should_fail" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
-      <option name="command" value="test --package pallet-kitties --lib tests::create_kitty_count_overflow_should_fail -- --exact" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$" />
       <option name="channel" value="DEFAULT" />
       <option name="requiredFeatures" value="true" />
@@ -145,13 +101,47 @@
         <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Test tests::transfer_kitty_not_owner" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="command" value="test --package pallet-kitties --lib tests::transfer_kitty_not_owner -- --exact" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <option name="channel" value="DEFAULT" />
+      <option name="requiredFeatures" value="true" />
+      <option name="allFeatures" value="false" />
+      <option name="emulateTerminal" value="false" />
+      <option name="withSudo" value="false" />
+      <option name="buildTarget" value="REMOTE" />
+      <option name="backtrace" value="SHORT" />
+      <envs />
+      <option name="isRedirectInput" value="false" />
+      <option name="redirectInputPath" value="" />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test tests::transfer_kitty_work" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="command" value="test --package pallet-kitties --lib tests::transfer_kitty_work -- --exact" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <option name="channel" value="DEFAULT" />
+      <option name="requiredFeatures" value="true" />
+      <option name="allFeatures" value="false" />
+      <option name="emulateTerminal" value="false" />
+      <option name="withSudo" value="false" />
+      <option name="buildTarget" value="REMOTE" />
+      <option name="backtrace" value="SHORT" />
+      <envs />
+      <option name="isRedirectInput" value="false" />
+      <option name="redirectInputPath" value="" />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Cargo.Test tests::transfer_kitty_not_owner" />
+        <item itemvalue="Cargo.Test tests::transfer_kitty_work" />
         <item itemvalue="Cargo.Test tests::breed_kitty_not_owner_should_fail" />
         <item itemvalue="Cargo.Test tests::create_kitty_next_kitty_id_overflow_should_fail" />
         <item itemvalue="Cargo.Test tests::create_kitty_not_enough_balance_should_fail" />
-        <item itemvalue="Cargo.Test tests::create_kitty_count_overflow_should_fail" />
-        <item itemvalue="Cargo.Test tests::breed_kitty_works" />
       </list>
     </recent_temporary>
   </component>
@@ -177,6 +167,7 @@
       <workItem from="1663336218833" duration="665000" />
       <workItem from="1663414305652" duration="7072000" />
       <workItem from="1663546548238" duration="213000" />
+      <workItem from="1663553889888" duration="1235000" />
     </task>
     <task id="LOCAL-00001" summary="kitty 添加 #[transactional] 宏   20220917">
       <created>1663425963398</created>
