@@ -6,7 +6,7 @@ fn on_finalize(_n: T::BlockNumber)()
 fn on_idle(_n: T::BlockNumber, _remaining_weight: Weight) -> Weight{}
 
 
-#### 运行结果顺序：
+#### 3运行结果顺序：
 
 2022-09-20 10:30:06 ✨ Imported #3 (0x1c59…9761)    
 2022-09-20 10:30:06 Hello World from offchain workers!: 3    
