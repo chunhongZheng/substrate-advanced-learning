@@ -7,6 +7,7 @@ coverage
 .yarn/*
 !.yarn/releases
 !.yarn/plugins
+!.yarn/cache
 !.yarn/sdks
 !.yarn/versions
 .pnp.*

@@ -88,6 +88,17 @@ pub fn new_partial(
 		)?;
 	let client = Arc::new(client);
 
+	//发起链上交易添加配置开始
+	if config.offchain_worker.enabled {
+		let keystore = keystore_container.sync_keystore();
+		sp_keystore::SyncCryptoStore::sr25519_generate_new(
+			&*keystore,
+		//	node_template_runtime::pallet_template::KEY_TYPE,
+			node_template_runtime::pallet_offchain_index::KEY_TYPE,
+			Some("//Alice"),
+		).expect("Creating key with account Alice should succeed.");
+	}
+    //发起链上交易添加配置结束
 	let telemetry = telemetry.map(|(worker, telemetry)| {
 		task_manager.spawn_handle().spawn("telemetry", None, worker.run());
 		telemetry

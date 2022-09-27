@@ -173,3 +173,9 @@ type AuthorityId: AppCrypto<Self::Public, Self::Signature>;
 
             Ok(())
         }
+
+
+#### 使用offchain_index
+运行时命令为：
+./target/release/node-template --dev --tmp --enable-offchain-indexing=true
+./target/release/node-template --dev --tmp --enable-offchain-indexing true

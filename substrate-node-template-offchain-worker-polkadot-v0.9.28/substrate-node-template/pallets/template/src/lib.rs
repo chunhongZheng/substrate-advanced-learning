@@ -63,7 +63,9 @@ pub mod pallet {
     use sp_runtime::traits::Zero;
     use sp_std::vec::Vec;
     use sp_std::vec;
-
+    use sp_io::offchain_index;
+    #[derive(Debug, Deserialize, Encode, Decode, Default)]
+    struct IndexingData(Vec<u8>, u64);
 
     #[derive(Deserialize, Encode, Decode)]
     struct GithubInfo {
@@ -189,6 +191,14 @@ pub mod pallet {
 
             log::info!("in submit_data call: {:?}", payload);
 
+            //奇数区写入，偶数块读取
+            // Off-chain indexing write
+            let key = Self::derive_key(frame_system::Module::<T>::block_number());
+            log::info!("in submit_data key: {:?}", key);
+            let number: u64 = frame_system::Module::<T>::block_number().try_into().unwrap_or(0);
+            let data = IndexingData(b"submit_number_unsigned".to_vec(), number);
+            offchain_index::set(&key, &data.encode());
+            log::info!("Leave from submit_data function!: {:?}", frame_system::Module::<T>::block_number());
             Ok(().into())
         }
     }
@@ -197,12 +207,12 @@ pub mod pallet {
     impl<T: Config> Hooks<BlockNumberFor<T>> for Pallet<T> {
 
         fn offchain_worker(block_number: T::BlockNumber) {
-            log::info!("Hello World send_signed_tx from offchain workers!: {:?}", block_number);
-
-            let payload: Vec<u8> = vec![1,2,3,4,5,6,7,8];
-            _ = Self::send_signed_tx(payload);
-
-            log::info!("Leave from offchain workers!: {:?}", block_number);
+            // log::info!("Hello World send_signed_tx from offchain workers!: {:?}", block_number);
+            //
+            // let payload: Vec<u8> = vec![1,2,3,4,5,6,7,8];
+            // _ = Self::send_signed_tx(payload);
+            //
+            // log::info!("Leave from offchain workers!: {:?}", block_number);
 
         }
 
@@ -211,19 +221,19 @@ pub mod pallet {
         // }
 
 
-        fn on_initialize(_n: T::BlockNumber) -> Weight {
-            log::info!("in 8988 on_initialize!");
-            0
-        }
-
-        fn on_finalize(_n: T::BlockNumber) {
-            log::info!("in on_finalize!");
-        }
-
-        fn on_idle(_n: T::BlockNumber, _remaining_weight: Weight) -> Weight {
-            log::info!("in on_idle!");
-            0
-        }
+        // fn on_initialize(_n: T::BlockNumber) -> Weight {
+        //     log::info!("in 8988 on_initialize!");
+        //     0
+        // }
+        //
+        // fn on_finalize(_n: T::BlockNumber) {
+        //     log::info!("in on_finalize!");
+        // }
+        //
+        // fn on_idle(_n: T::BlockNumber, _remaining_weight: Weight) -> Weight {
+        //     log::info!("in on_idle!");
+        //     0
+        // }
 
     }
 

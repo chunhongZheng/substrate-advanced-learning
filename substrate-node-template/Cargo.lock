@@ -3772,6 +3772,7 @@ dependencies = [
  "sp-finality-grandpa",
  "sp-inherents",
  "sp-keyring",
+ "sp-keystore",
  "sp-runtime",
  "sp-timestamp",
  "substrate-build-script-utils",
@@ -3795,6 +3796,7 @@ dependencies = [
  "pallet-balances",
  "pallet-grandpa",
  "pallet-kitties",
+ "pallet-offchain_index",
  "pallet-poe",
  "pallet-randomness-collective-flip",
  "pallet-sudo",
@@ -4065,6 +4067,24 @@ dependencies = [
  "sp-core",
  "sp-io",
  "sp-runtime",
+]
+
+[[package]]
+name = "pallet-offchain_index"
+version = "4.0.0-dev"
+dependencies = [
+ "frame-benchmarking",
+ "frame-support",
+ "frame-system",
+ "log",
+ "parity-scale-codec",
+ "scale-info",
+ "serde",
+ "serde_json",
+ "sp-core",
+ "sp-io",
+ "sp-runtime",
+ "sp-std",
 ]
 
 [[package]]
