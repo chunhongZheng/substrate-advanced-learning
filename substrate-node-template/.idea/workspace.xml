@@ -9,8 +9,10 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b1d8606-3d07-43de-88ab-3032fe0f69c9" name="变更" comment="增加poe模块的benchmark并将其运行结果应用在可调用函数  20221012">
-      <change afterPath="$PROJECT_DIR$/docs/Substrate benchmark.md" afterDir="false" />
+    <list default="true" id="6b1d8606-3d07-43de-88ab-3032fe0f69c9" name="变更" comment="substrate benchmark指令备注 20221012">
+      <change afterPath="$PROJECT_DIR$/docs/chainspec.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/local-testnet-spec-raw.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/local-testnet-spec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -192,7 +194,7 @@
       <workItem from="1664520956420" duration="308000" />
       <workItem from="1665449875057" duration="5318000" />
       <workItem from="1665540527334" duration="801000" />
-      <workItem from="1665542044292" duration="15165000" />
+      <workItem from="1665542044292" duration="17686000" />
     </task>
     <task id="LOCAL-00001" summary="kitty 添加 #[transactional] 宏   20220917">
       <created>1663425963398</created>
@@ -229,7 +231,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665565943368</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="substrate benchmark指令备注 20221012">
+      <created>1665567003191</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1665567003191</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -253,6 +262,7 @@
     <MESSAGE value="添加kitty单元测试及前端front-end react运行截图  20220919" />
     <MESSAGE value="添加offchain_index pallet 20220927" />
     <MESSAGE value="增加poe模块的benchmark并将其运行结果应用在可调用函数  20221012" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加poe模块的benchmark并将其运行结果应用在可调用函数  20221012" />
+    <MESSAGE value="substrate benchmark指令备注 20221012" />
+    <option name="LAST_COMMIT_MESSAGE" value="substrate benchmark指令备注 20221012" />
   </component>
 </project>
