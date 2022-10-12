@@ -9,16 +9,9 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b1d8606-3d07-43de-88ab-3032fe0f69c9" name="变更" comment="添加offchain_index pallet 20220927">
-      <change afterPath="$PROJECT_DIR$/.maintain/frame-weight-template.hbs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pallets/poe/src/benchmarking.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pallets/poe/src/weights.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/raw.json" afterDir="false" />
+    <list default="true" id="6b1d8606-3d07-43de-88ab-3032fe0f69c9" name="变更" comment="增加poe模块的benchmark并将其运行结果应用在可调用函数  20221012">
+      <change afterPath="$PROJECT_DIR$/docs/Substrate benchmark.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pallets/poe/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/pallets/poe/src/lib.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pallets/poe/src/mock.rs" beforeDir="false" afterPath="$PROJECT_DIR$/pallets/poe/src/mock.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/Cargo.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/src/lib.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,7 +192,7 @@
       <workItem from="1664520956420" duration="308000" />
       <workItem from="1665449875057" duration="5318000" />
       <workItem from="1665540527334" duration="801000" />
-      <workItem from="1665542044292" duration="13828000" />
+      <workItem from="1665542044292" duration="15165000" />
     </task>
     <task id="LOCAL-00001" summary="kitty 添加 #[transactional] 宏   20220917">
       <created>1663425963398</created>
@@ -229,7 +222,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664274304884</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="增加poe模块的benchmark并将其运行结果应用在可调用函数  20221012">
+      <created>1665565943367</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1665565943368</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -252,6 +252,7 @@
     <MESSAGE value="添加kitty单元测试用例  20220919" />
     <MESSAGE value="添加kitty单元测试及前端front-end react运行截图  20220919" />
     <MESSAGE value="添加offchain_index pallet 20220927" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加offchain_index pallet 20220927" />
+    <MESSAGE value="增加poe模块的benchmark并将其运行结果应用在可调用函数  20221012" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加poe模块的benchmark并将其运行结果应用在可调用函数  20221012" />
   </component>
 </project>
