@@ -9,9 +9,9 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b1d8606-3d07-43de-88ab-3032fe0f69c9" name="变更" comment="local-testnet chain spec两种格式文件提交 20221012">
+    <list default="true" id="6b1d8606-3d07-43de-88ab-3032fe0f69c9" name="变更" comment="根据chainspec部署公开测试网络提交 20221012">
+      <change afterPath="$PROJECT_DIR$/代码运行截图/lesson6/作业备注.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/chainspec.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/chainspec.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,7 +192,7 @@
       <workItem from="1664520956420" duration="308000" />
       <workItem from="1665449875057" duration="5318000" />
       <workItem from="1665540527334" duration="801000" />
-      <workItem from="1665542044292" duration="18607000" />
+      <workItem from="1665542044292" duration="18936000" />
     </task>
     <task id="LOCAL-00001" summary="kitty 添加 #[transactional] 宏   20220917">
       <created>1663425963398</created>
@@ -243,7 +243,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665570904354</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="根据chainspec部署公开测试网络提交 20221012">
+      <created>1665571867272</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1665571867272</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,6 +276,7 @@
     <MESSAGE value="增加poe模块的benchmark并将其运行结果应用在可调用函数  20221012" />
     <MESSAGE value="substrate benchmark指令备注 20221012" />
     <MESSAGE value="local-testnet chain spec两种格式文件提交 20221012" />
-    <option name="LAST_COMMIT_MESSAGE" value="local-testnet chain spec两种格式文件提交 20221012" />
+    <MESSAGE value="根据chainspec部署公开测试网络提交 20221012" />
+    <option name="LAST_COMMIT_MESSAGE" value="根据chainspec部署公开测试网络提交 20221012" />
   </component>
 </project>
