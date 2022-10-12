@@ -9,11 +9,19 @@ mod mock;
 
 #[cfg(test)]
 mod tests;
+
+#[cfg(feature = "runtime-benchmarks")]
+mod benchmarking;
+
+pub mod weights;
+pub use weights::*;
+
 #[frame_support::pallet]
 pub mod pallet {
-    use frame_support::pallet_prelude::*;
-    use frame_system::pallet_prelude::*;
-    use sp_std::vec::Vec;
+    pub use frame_support::pallet_prelude::*;
+    pub use frame_system::pallet_prelude::*;
+    use super::WeightInfo;
+    pub use sp_std::vec::Vec;
 
     /// Configure the pallet by specifying the parameters and types on which it depends.
     #[pallet::config]
@@ -22,6 +30,9 @@ pub mod pallet {
         type Event: From<Event<Self>> + IsType<<Self as frame_system::Config>::Event>;
         #[pallet::constant]
         type MaxClaimLength: Get<u32>;
+
+        /// Information on runtime weights.
+        type WeightInfo: WeightInfo;
     }
 
     #[pallet::pallet]
@@ -72,7 +83,8 @@ pub mod pallet {
     // Dispatchable functions must be annotated with a weight and must return a DispatchResult.
     #[pallet::call]
     impl<T: Config> Pallet<T> {
-        #[pallet::weight(0)]
+      //  #[pallet::weight(0)]
+        #[pallet::weight(T::WeightInfo::create_claim(_claim.len() as u32))]
         pub fn create_claim(_origin: OriginFor<T>, _claim: Vec<u8>) -> DispatchResultWithPostInfo {
 
              let sender = ensure_signed(_origin)?;
@@ -93,7 +105,8 @@ pub mod pallet {
             Ok(().into())
         }
 
-        #[pallet::weight(0)]
+      //  #[pallet::weight(0)]
+        #[pallet::weight(T::WeightInfo::revoke_claim(_claim.len() as u32))]
         pub fn revoke_claim(_origin: OriginFor<T>, _claim: Vec<u8>) -> DispatchResultWithPostInfo {
             // Check that the extrinsic was signed and get the signer.
             // This function will return an error if the extrinsic is not signed.
@@ -119,7 +132,8 @@ pub mod pallet {
             Ok(().into())
         }
 
-        #[pallet::weight(0)]
+       // #[pallet::weight(0)]
+        #[pallet::weight(T::WeightInfo::transfer_claim(_claim.len() as u32))]
         pub fn transfer_claim(
             origin: OriginFor<T>,
             to: T::AccountId,

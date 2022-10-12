@@ -10,7 +10,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b1d8606-3d07-43de-88ab-3032fe0f69c9" name="变更" comment="添加offchain_index pallet 20220927">
+      <change afterPath="$PROJECT_DIR$/.maintain/frame-weight-template.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pallets/poe/src/benchmarking.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pallets/poe/src/weights.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/raw.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pallets/poe/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/pallets/poe/src/lib.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pallets/poe/src/mock.rs" beforeDir="false" afterPath="$PROJECT_DIR$/pallets/poe/src/mock.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/Cargo.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/src/lib.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,25 +45,29 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2EnXMHHZS8rHzxWNCZUBJKlJgfB" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/caspar/CLionProjects/substrate-advanced-learning/substrate-node-template/pallets/offchain_index&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;org.rust.cargo.project.model.PROJECT_DISCOVERY&quot;: &quot;true&quot;,
-    &quot;org.rust.disableDetachedFileInspection/Users/caspar/CLionProjects/substrate-advanced-learning/substrate-node-template/pallets/offchain_index/src/lib.rs&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "last_opened_file_path": "/Users/caspar/CLionProjects/substrate-advanced-learning/substrate-node-template/pallets/offchain_index",
+    "nodejs_package_manager_path": "npm",
+    "org.rust.cargo.project.model.PROJECT_DISCOVERY": "true",
+    "org.rust.disableDetachedFileInspection/Users/caspar/CLionProjects/substrate-advanced-learning/substrate-node-template/pallets/offchain_index/src/lib.rs": "true",
+    "org.rust.disableDetachedFileInspection/Users/caspar/CLionProjects/substrate-advanced-learning/substrate-node-template/pallets/poe/src/we2ights.rs": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/pallets/offchain_index" />
@@ -185,6 +197,9 @@
       <workItem from="1664246383589" duration="6404000" />
       <workItem from="1664260583560" duration="14095000" />
       <workItem from="1664520956420" duration="308000" />
+      <workItem from="1665449875057" duration="5318000" />
+      <workItem from="1665540527334" duration="801000" />
+      <workItem from="1665542044292" duration="13828000" />
     </task>
     <task id="LOCAL-00001" summary="kitty 添加 #[transactional] 宏   20220917">
       <created>1663425963398</created>
@@ -232,6 +247,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="kitty 添加 #[transactional] 宏   20220917" />
     <MESSAGE value="添加kitty单元测试用例  20220919" />
     <MESSAGE value="添加kitty单元测试及前端front-end react运行截图  20220919" />

@@ -48,9 +48,13 @@ impl system::Config for Test {
 	type MaxConsumers = frame_support::traits::ConstU32<16>;
 }
 
+frame_support::parameter_types! {
+	pub const MaxClaimLength: u8 = 3;
+}
 impl pallet_poe::Config for Test {
 	type Event = Event;
-	type MaxClaimLength = ConstU32<512>;
+	type MaxClaimLength = MaxClaimLength;
+	type WeightInfo = ();
 }
 
 // Build genesis storage according to the mock runtime.
